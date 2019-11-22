@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace Point
 {
-    class HorizontalLine
+    class HorizontalLine : Figure
     {
-        public List<MyPoint> pointList = new List<MyPoint>();
+        //public List<MyPoint> pointList = new List<MyPoint>();
 
         public HorizontalLine(int xLeft, int xRight, int y, char symbol)
         {
+           
+
             for(int i= xLeft; i <= xRight; i++)
             {
                 MyPoint newPoint = new MyPoint(i, y, symbol);
@@ -22,13 +24,13 @@ namespace Point
 
         
 
-        public void DrawHorizontalLine()
+        /*public void DrawHorizontalLine()
         {
             foreach(MyPoint point in pointList)
             {
                 point.Draw();
             }
-        }
+        }*/
     }
 
    

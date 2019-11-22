@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace Point
 {
-    class VerticalLine
+    class VerticalLine : Figure
     {
         
         
-            public List<MyPoint> pointList = new List<MyPoint>();
+            
 
             public VerticalLine(int yUp, int yDown, int x, char symbol) // JÄRJEKORD ON OLULINE!!! X enne!
             {
+
                 for (int i = yUp; i <= yDown; i++)
                 {
                     MyPoint newPoint = new MyPoint(x, i, symbol);
@@ -22,13 +23,13 @@ namespace Point
                 }
             }
 
-            public void DrawVerticalLine()
+           /* public void DrawVerticalLine()
             {
                 foreach (MyPoint point in pointList)
                 {
                     point.Draw();
                 }
-            }
+            }*/
         
     }
 }
